@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>P &amp; A Roofing and Sheet Metal — your new AI receptionist (live demo)</title>
+<meta name="robots" content="noindex"/>
+<style>
+  :root{ --a:#1d4ed8; --b:#0ea5e9; --ink:#0b1220; --muted:#5b6b82; --line:#e7ecf3; --bg:#f6f8fb; }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{ margin:0; color:var(--ink); background:var(--bg);
+        font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.55; }
+  .wrap{ max-width:980px; margin:0 auto; padding:0 22px; }
+  a{ color:var(--a); }
+  .topbar{ display:flex; align-items:center; justify-content:space-between; padding:18px 0; }
+  .brand{ display:flex; align-items:center; gap:11px; font-weight:800; font-size:18px; letter-spacing:-.01em; }
+  .brand .dot{ width:34px; height:34px; border-radius:9px; background:linear-gradient(135deg,#1e3a8a 0%,#2563eb 55%,#0ea5e9 100%); display:grid; place-items:center; color:#fff; font-size:17px; }
+  .topphone{ font-size:14px; color:var(--muted); text-decoration:none; }
+  .hero{ background:linear-gradient(135deg,#1e3a8a 0%,#2563eb 55%,#0ea5e9 100%); color:#fff; border-radius:22px; padding:46px 38px 40px; margin-top:6px;
+         box-shadow:0 24px 60px -28px rgba(13,42,99,.55); position:relative; overflow:hidden; }
+  .hero:before{ content:""; position:absolute; inset:0; background:radial-gradient(1200px 300px at 80% -10%,rgba(255,255,255,.18),transparent); }
+  .eyebrow{ text-transform:uppercase; letter-spacing:.14em; font-size:12px; font-weight:700; opacity:.92; }
+  .hero h1{ font-size:clamp(28px,4.6vw,42px); line-height:1.08; margin:12px 0 10px; letter-spacing:-.02em; max-width:18ch; }
+  .hero p{ font-size:17px; max-width:54ch; opacity:.96; margin:0 0 6px; }
+  .callbox{ background:rgba(255,255,255,.12); backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,.25);
+            border-radius:16px; padding:22px; margin-top:24px; display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  .cta{ background:#fff; color:var(--a); border:0; border-radius:13px; padding:17px 26px; font-size:17px;
+        font-weight:800; cursor:pointer; box-shadow:0 10px 24px -10px rgba(0,0,0,.4); transition:transform .08s ease; }
+  .cta:active{ transform:translateY(1px); }
+  .cta:disabled{ opacity:.6; cursor:default; }
+  .callmeta{ font-size:14px; opacity:.95; }
+  .status{ font-size:14px; min-height:20px; opacity:.95; margin-top:4px; }
+  .pulse{ display:inline-block; width:9px; height:9px; border-radius:50%; background:#34d399; margin-right:7px;
+          box-shadow:0 0 0 0 rgba(52,211,153,.7); animation:p 1.6s infinite; }
+  @keyframes p{ 70%{ box-shadow:0 0 0 10px rgba(52,211,153,0);} 100%{ box-shadow:0 0 0 0 rgba(52,211,153,0);} }
+  .grid{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:30px 0; }
+  @media(max-width:720px){ .grid{ grid-template-columns:1fr; } .hero{ padding:34px 24px; } }
+  .card{ background:#fff; border:1px solid var(--line); border-radius:16px; padding:22px 22px; }
+  .card h3{ margin:0 0 12px; font-size:13px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); }
+  .chips{ display:flex; flex-wrap:wrap; gap:9px; }
+  .chip{ background:#eef3fb; color:#1e3a8a; border-radius:999px; padding:7px 13px; font-size:14px; font-weight:600; }
+  .hvac .chip{ background:#fff1e6; color:#9a3412; }
+  .fact{ display:flex; gap:11px; align-items:flex-start; margin:9px 0; font-size:15px; }
+  .fact b{ font-weight:700; }
+  .rate{ font-size:30px; font-weight:800; letter-spacing:-.02em; }
+  .stars{ color:#f59e0b; letter-spacing:2px; font-size:18px; }
+  .why{ background:#fff; border:1px solid var(--line); border-left:4px solid var(--a); border-radius:14px;
+        padding:22px 24px; margin:8px 0 30px; }
+  .why h2{ margin:0 0 8px; font-size:20px; letter-spacing:-.01em; }
+  .why p{ color:var(--muted); margin:6px 0; }
+  .foot{ color:#90a0b5; font-size:12.5px; text-align:center; padding:26px 0 40px; line-height:1.6; }
+  .badge{ display:inline-block; background:rgba(255,255,255,.18); border:1px solid rgba(255,255,255,.3);
+          padding:4px 11px; border-radius:999px; font-size:12.5px; font-weight:700; margin-top:14px; }
+</style>
+</head>
+<body class="roofer">
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand"><span class="dot">🔧</span> P &amp; A Roofing and Sheet Metal</div>
+    <a class="topphone" href="#">4076509541</a>
+  </div>
+
+  <section class="hero">
+    <div class="eyebrow">A live receptionist — built for P &amp; A Roofing and Sheet Metal</div>
+    <h1>Hear your phone answered, even when you can't pick up.</h1>
+    <p>This is <b>Reese</b>, the receptionist we built for <b>P &amp; A Roofing and Sheet Metal</b>, answering the way your front desk would — as P &amp; A Roofing and Sheet Metal, across Central. It handles the everyday questions about residential roof replacement, takes the caller's name and number, and books them in. Tap below and try to catch it out — talk to it like a customer would.</p>
+    <div class="callbox">
+      <button class="cta" id="call">▶︎&nbsp;&nbsp;Talk to Reese</button>
+      <div>
+        <div class="callmeta"><span class="pulse"></span>Live demo · answers as P &amp; A Roofing and Sheet Metal</div>
+        <div class="status" id="status">No app, no sign-up — just your browser mic.</div>
+      </div>
+    </div>
+    <span class="badge">24/7 emergency line — it triages urgent calls first</span>
+  </section>
+
+  <div class="grid">
+    <div class="card">
+      <h3>What it already knows it can help with</h3>
+      <div class="chips"><span class="chip">Residential roof replacement</span><span class="chip">Residential roof repairs</span><span class="chip">Residential roof maintenance</span><span class="chip">Commercial roof replacement</span><span class="chip">Commercial roof repair</span><span class="chip">Commercial roof coating</span></div>
+    </div>
+    <div class="card">
+      <h3>Built on your real details</h3>
+      <div class="fact">📍 <span>Serving <b>Central and South Florida, including Orlando</b>.</span></div><div class="fact">🕑 <span>same-day appointments are often available, and we offer 24-hour emergency service</span></div><div class="fact">👤 <span>Locally owned and operated.</span></div><div class="fact">📞 <span>Never miss a call — even after hours.</span></div>
+    </div>
+  </div>
+
+  
+
+  <div class="why">
+    <h2>Why we built this for you</h2>
+    <p>When the phone rings and you're under a sink or up on a roof, that call goes to voicemail — and
+       most people don't leave one. They just call the next plumber on Google. The missed call is the lost job.</p>
+    <p>This receptionist picks up every time, sounds like a real person on your front desk, answers the
+       usual questions, and takes the caller's name, number and what they need — so the job's still yours
+       when you're back to your phone. You keep your number; calls you can't get just forward here.</p>
+  </div>
+
+  <div class="foot">
+    This is a private demo built by Switchboard for P &amp; A Roofing and Sheet Metal from publicly available information.
+    We're not affiliated with P &amp; A Roofing and Sheet Metal and nothing here is live on your phone line. You keep your
+    number — this only answers calls you choose to forward.<br/>
+    Switchboard · AI phone receptionists for home-services.
+  </div>
+</div>
+
+<script type="module">
+  import Vapi from "https://esm.sh/@vapi-ai/web@latest";
+  const vapi = new Vapi("3eb4480d-0ccc-40c2-9e30-66f3e3b66842");
+  const btn = document.getElementById("call");
+  const status = document.getElementById("status");
+  let live = false;
+  btn.onclick = () => {
+    if (!live) { status.textContent = "Connecting… allow your mic when asked."; vapi.start("eb0867bc-0249-42e5-9485-3d7a7d53decf"); }
+    else { vapi.stop(); }
+  };
+  vapi.on("call-start", () => { live = true; btn.textContent = "■  End call"; status.textContent = "Connected — say hello, like a customer would."; });
+  vapi.on("call-end", () => { live = false; btn.innerHTML = "▶︎&nbsp;&nbsp;Talk to Reese"; status.textContent = "Call ended. Tap to try again."; });
+  vapi.on("error", (e) => { status.textContent = "Couldn't start — please allow mic access and try again."; console.error(e); });
+</script>
+</body>
+</html>
